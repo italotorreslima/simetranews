@@ -15,7 +15,9 @@ export function NewsCard() {
 
   useEffect(() => {
     async function getNews() {
-      const response = await fetch(`http://localhost:3333/resumedNews`);
+      const response = await fetch(
+        `https://my-json-server.typicode.com/italotorreslima/simetranews/resumedNews`
+      );
       const convertedResponse = await response.json();
       setNews(convertedResponse);
     }

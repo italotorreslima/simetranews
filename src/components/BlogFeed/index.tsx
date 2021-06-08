@@ -17,7 +17,9 @@ export function BlogFeed() {
 
   useEffect(() => {
     async function getNews() {
-      const response = await fetch(`http://localhost:3333/news/${blogid}`);
+      const response = await fetch(
+        `https://my-json-server.typicode.com/italotorreslima/simetranews/news/${blogid}`
+      );
       const convertedResponse = await response.json();
       setInfo(convertedResponse);
       console.log(convertedResponse);
